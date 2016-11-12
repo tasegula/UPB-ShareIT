@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="850.0" snapToPixel="false" styleClass="background-app" stylesheets="@../css/application.css,@../css/buttons.css,@../css/containers.css,@../css/text.css,@../css/table.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.superman.gui.java.DownloadController">
+	<children>
+		<Pane layoutX="665.0" layoutY="45.0" prefHeight="450.0" prefWidth="180.0" styleClass="pane">
+			<children>
+				<HBox fillHeight="false" prefHeight="30.0" prefWidth="180.0">
+					<children>
+						<TextField fx:id="dSearch_user" onAction="#searchUserHandle" onMouseClicked="#searchUserHandle" prefHeight="25.0" prefWidth="115.0" styleClass="search-user" translateX="10.0" translateY="5.0">
+							<font>
+								<Font size="10.0" />
+							</font>
+						</TextField>
+						<Button fx:id="sButton_user" mnemonicParsing="false" onAction="#userButtonHandle" prefHeight="25.0" prefWidth="50.0" scaleX="0.5" styleClass="iphone" text="R" translateX="10.0" translateY="5.0">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+						</Button>
+					</children>
+				</HBox>
+				<ListView fx:id="dList_user" layoutY="30.0" onContextMenuRequested="#listDelFilelist" onMouseClicked="#listAddFilelist" prefHeight="410.0" prefWidth="180.0" translateY="10.0" />
+			</children>
+		</Pane>
+		<TextField fx:id="dSearch_file" layoutX="5.0" layoutY="50.0" onMouseClicked="#searchFileHandle" onMouseReleased="#searchFileHandle" prefHeight="25.0" prefWidth="650.0" styleClass="search-file" />
+		<GridPane layoutX="5.0" layoutY="5.0" prefHeight="35.0" prefWidth="840.0">
+			<columnConstraints>
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="5.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="35.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+				<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+			</columnConstraints>
+			<rowConstraints>
+				<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+			</rowConstraints>
+			<children>
+				<ToggleButton fx:id="dToggle_download" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toggleButton" prefHeight="35.0" prefWidth="150.0" selected="true" style="-fx-effect: null;" text="Transfer" GridPane.columnIndex="1" />
+				<ToggleButton fx:id="dToggle_share" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toggleButton" prefHeight="35.0" prefWidth="150.0" text="Partajare" GridPane.columnIndex="3" />
+				<ToggleButton fx:id="dToggle_account" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#toggleButton" prefHeight="35.0" prefWidth="150.0" text="Cont" GridPane.columnIndex="5" />
+				<ImageView fx:id="dImage_logo" fitHeight="50.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" GridPane.columnIndex="7">
+					<image>
+						<Image url="@../images/logo_v22.png" />
+					</image>
+				</ImageView>
+			</children>
+		</GridPane>
+		<TableView fx:id="dTable" layoutX="75.0" layoutY="395.0" onMouseClicked="#dTable_clicked" prefHeight="100.0" prefWidth="580.0">
+			<columns>
+				<TableColumn fx:id="dTable_file" prefWidth="225.0" text="Nume fisier" />
+				<TableColumn fx:id="dTable_progress" prefWidth="245.0" text="Progres" />
+				<TableColumn fx:id="dTable_size" prefWidth="55.0" text="Dimensiune" />
+				<TableColumn fx:id="dTable_user" prefWidth="50.0" text="User" />
+			</columns>
+		</TableView>
+		<TreeTableView fx:id="dTree" layoutX="5.0" layoutY="85.0" onMouseClicked="#dTree_download" prefHeight="305.0" prefWidth="650.0" stylesheets="@../css/table.css" tableMenuButtonVisible="true">
+			<columns>
+				<TreeTableColumn fx:id="dTree_filename" prefWidth="450.0" text="Nume fisier" />
+				<TreeTableColumn fx:id="dTree_size" prefWidth="100.0" text="Dimensiune" />
+				<TreeTableColumn fx:id="dTree_username" prefWidth="100.0" text="Utilizator" />
+			</columns>
+		</TreeTableView>
+		<Button fx:id="cancelJob" layoutX="5.0" layoutY="395.0" mnemonicParsing="false" onAction="#cancelHandle" prefHeight="100.0" prefWidth="65.0" text="STOP" textOverrun="CLIP" wrapText="true" />
+	</children>
+</AnchorPane>

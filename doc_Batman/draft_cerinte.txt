@@ -1,0 +1,99 @@
+					Aplicatie IP
+
+File sharing system:
+
+1)Server central:
+	
+	1.1)Permite autentificare(username-password);
+		- fiecare client la conectare trebuie sa se autentifice pe server;
+		- fiecare client autentificat are acces la listele tuturor celorlalti clienti online;
+		- la autentificare unui utilizator server-ul verifica daca toate fisierele din
+		filelist sunt disponibile si sa expande folderele din filelist;
+	
+	1.2)File-lists:
+		- retine toate filelist-urile utilizatorilor inregistrati(nu neaparat online);
+		- permite accesul doar la filelist-urile utilizatorilor online;
+
+	1.3)Search:
+		- search-phrase-ul este impartit in cuvinte si in functie de numarul de match-uri
+		returneaza rezultatele in ordine respectiv dupa dimensiune;
+		- primeste niste flag-uri de cautare de la aplicatia client si filtreaza rezultatele;
+
+	1.4) Informatii disponibile pentru clienti:
+		- lista de utilizatori online;
+		- ip & port pentru un client;
+
+2)Aplicatia client:
+	Tab-uri:
+		> Search;
+		> Online Users;
+		> Profile;
+		> Shared files;
+		> History;
+		> Status bar;
+		> File lists;
+		> Administrator;
+
+	2.1) Primul ecran este cel de autentificare(nu se permite accesul la niciuna din functionalitati);
+	
+	2.2) Search tab:
+		- contine:
+			> search box;
+			> optiuni de filtrare a rezultatelor;
+			> zona pentru afisarea rezultatelor cu optiune de sortare dupa nume, dimensiune, tip;
+		- buton de download in dreptul fiecarui fisier rezultat care sa inititeze download-ul;
+
+	2.3) Online  Users:
+		- lista de utilizatori online;
+		- pentru fiecare utilizator se afiseaza: username-ul, dimensiunea totala a fisierelor share-uite, locatie, numar sloturi disponibile; ?iconite?
+		- buton de refresh;
+		- buton download filelist in dreptul fiecarui user online;
+		+ altele;
+
+	2.4) Profile:
+		- setari conexiune: numar slot-uri;
+		- folder download(implicit un folder download unde e instalata aplicatia);
+		- regiune;
+		- description care sa fie afisat in tab-ul Users;
+		- cat timp sa se pastreze log-ul;
+		- buton de logout;
+		+ altele
+
+	2.5) Shared files:
+		- lista de fisiere share-uite cu optiune de collapse in functie de foldere;
+		- buton de add pentru a adauga un fisier; butonul add deschide o fereastra de navigare pentru alegerea fisierului; se updateaza lista de fisiere;
+		- se permite stergerea unui fisier/folder prin selectare cu click si apasarea pe un boton de delete; ?checkbox-uri in fata fiecarui fisier?
+
+	2.6) History:
+		- contine informatii despre sesiunea curenta;
+		- un log al tuturor informatiilor: search, delete file, download filelist
+		- impartit pe categorii, sortate cronologic;
+		- posibilitate de a cauta in log-uri;
+		- pentru fisierele downloadate se poate reincerca download-ul prin dublu click pe intrarea respectiva din log;
+		- butoane pentru: clear, delete + checkbox/select by click pentru intrari individuale, checkbox in dreptul categoriei pentru a sterge toata categoria
+
+	2.7) File-lists:
+		> contine toate filelist-urile descarcate in sesiunea curenta;
+		> filelist-urile apar ca niste intrari avand numele user-ului caruia apartine;
+		> un click pe intrare va expanda si va afisa file-tree-ul;
+		> check + clear pentru fiecare intrare sau clear all;
+
+	2.8) Status bar:
+		> afiseaza descarcarile/upload-urile in progress/waiting;
+		> acest tab va ramane vizibil din orice alt tab, setat intr-o anumita regiune
+		+layout
+
+	2.9) Administrator bar:
+		- pentru a permite unei persoane cu acees privilegiat accesul la server
+		- ofera posibilitatea de a modifica credentialele altor useri(select user + buton 
+		change password);
+		- poate bloca sau sa dea ban permanent unui utilizator(select user  + ban/block
+		button;
+		- poate sa elimine din fisierele share-uite si sa dea block unui utilizator drept
+		penalizare daca acesta pune la share fisiere dubioase(iykwim);
+		- nu trebuie sa fie neaparat un tab nou, poate fi si o serie de functionalitati extra
+		adaugate celorlalte tab-uri pe care sa le poata folosi doar adminii;
+
+	Other ideas:
+		> utilizatori favoriti + permisiuni la fisiere in functie de "prietenia" intre utilizatori;
+

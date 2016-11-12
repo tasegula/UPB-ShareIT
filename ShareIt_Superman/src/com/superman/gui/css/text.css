@@ -1,0 +1,44 @@
+.text-field {	
+	-fx-font-family: "Calibri";
+	-fx-font-size: 18;
+	-fx-alignment: center-left;
+	
+	-fx-background-color: rgb(255, 255, 255, 0.3);
+	-fx-background-insets: 0.0;
+	-fx-background-radius: .5em;
+	
+	-fx-padding: 6 10 4 10;
+	-fx-effect: innershadow( gaussian, rgb(0, 0, 0, 0.8), 5, 0, 0, 2 );
+}
+
+.text-field.search-file {
+	-fx-font-size: 14;
+}
+
+.text-field.search-user {
+	-fx-font-size: 12;
+}
+
+.label {
+	-fx-font-family: "Calibri";
+	-fx-font-size: 18;
+	
+	-fx-text-fill: rgba(0, 0, 0, 0.75);
+	-fx-alignment: center;
+	
+	-fx-effect: dropshadow(one-pass-box,
+							rgb(111, 111, 111, 0.6),
+							0, 0.0, 0, 1);
+	-fx-border-width: 11;
+}
+
+.label.appTitle {
+	-fx-font-size: 64;
+}
+
+.label.download {
+	-fx-font-size: 12;
+	-fx-border-radius: 0;
+	-fx-border-color: rgb(206, 206, 206);
+	-fx-border-width: 1;
+}

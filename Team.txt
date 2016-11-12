@@ -1,0 +1,27 @@
+Batman Team:
+	Gula Tanase - Daniel Popovici - Sava Dragos - Baronea Claudiu, 334CA
+Superman Team:
+	Poenaru Andrei - Antoche Ioana - Papa Florin - Oprea Andrei, 334CA
+	
+Part I:
+	 >	Batman's SRS: 	by Batman
+	 >	Superman's SRS:	by Superman
+
+Part II:
+	 >	Batman's SRD: 	by Superman
+	 >	Superman's SRD:	by Batman
+
+Part III:
+	 >	Batman's Implementation: 	by Superman
+	 >	Superman's Implementation:	by Batman
+	 
+Part IV:
+	 >	Batman's Testing: 	by Batman
+	 >	Superman's Testing:	by Superman
+
+
+Batman Team Structure:
+	Gula Tanase:		Realizare interfata + realizare conexiune back-end to front-end
+	Popovici Daniel:	Realizare modul client
+	Sava Dragos:		Realizare modul client
+	Baronea Claudiu:	Realizare modul server

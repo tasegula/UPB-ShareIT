@@ -1,0 +1,19 @@
+/**
+ * This is the css stylesheet for the start page of the application
+ */
+ 
+.background-log {
+	-fx-background-color: rgba(237, 237, 237, 1.0);
+}
+
+.background-app {
+	-fx-background-color:
+		linear-gradient(from 0px 0px to 0px 45px, gray, darkgray 50%, dimgray 99%, #f7f7f7);
+}
+
+.list-view {
+	-fx-border-color: transparent;
+	-fx-border-width: 0;
+}
+
+
